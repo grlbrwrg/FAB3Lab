@@ -1,0 +1,93 @@
+{% load staticfiles %}
+
+<!--
+
+Stylesheets und Responsive Design sind für Warmduscher.
+
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Das FAB3lab im Produktionsraum</title>
+    <script src ="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src ="http://code.highcharts.com/highcharts.js"></script>
+    {% load chartit %}
+    {{ chart|load_charts:"container" }}
+</head>
+
+
+<body>
+
+    <div style="background-color:{{ farbe }};padding:10px;position: absolute;top:10px;left:10px;width:140px;height:40px;border-style:solid;border-width:2px;font-family: Lucida Console, monospace;font-size:200%">
+
+    FAB3Lab
+    
+    </div>
+    
+    <div style="padding:10px;position: absolute;top:30px;left:180px;width:320px;height:20px;border-style:solid;border-width:2px;font-family: Lucida Console, monospace;font-size:100%">
+
+    <a href="https://www.facebook.com/Produktionsraum-1485133988456248">Facebook</a> | <a href="http://produktionsraum.tumblr.com/">Tumblr<a/> | <a href="mailto:fab3lab@zu.de">Mail</a> | Podio
+    
+    </div>
+    
+    <div style="padding:10px;position: absolute;top:84px;left:10px;width:350px;height:350px;border-style:solid;border-width:2px;font-family: Lucida Console, monospace;font-size:100%">
+
+    DIE IDEE</br></br>
+    
+    Wir geben's zu: eine besonders gute Geschäftsidee ist Simone Giertz' <a href="https://www.youtube.com/watch?v=mXLzfAHl4-k">"Wake-up Machine"</a> wahrscheinlich nicht. Aber sie ist ein fabelhaftes Beispiel für Prototyping und zeigt, dass man eine grobe Idee nicht erst umfangreich am Reissbrett entwerfen muss.  </br></br>Mit genau diesem Ansatz starten wir - angeschlossen an den <a href="http://produktionsraum.tumblr.com/">Produktionsraum</a> - im nächsten Semester das FAB3Lab, verknüpfen unternehmerisches Denken mit Erfindergeist und werfen Technologie in den interdisziplinären Mix der Zeppelin Universität!
+    
+    </div>
+
+    <div id='container' style="padding:10px;position: absolute;top:84px;left:394px;width:400px;height:400px;border-style:solid;border-width:2px;font-family: Lucida Console, monospace;font-size:100%"> </div>    
+    
+    <div style="padding:10px;position: absolute;top:84px;left:828px;width:300px;height:320px;border-style:solid;border-width:2px;font-family: Lucida Console, monospace;font-size:100%">
+
+    HILDE </br></br>
+    
+    Unter dieser Webseite steckt Hilde, die allen Prototypen, die im FAB3Lab entstehen, eine einfach zu nutzende Schnittstelle ins Internet bietet. Derzeit können mit Hilde eine skalierbare Datenbank, ein flexibler Mailservice und die Datenanalyse und -visualisierungsfunktionen von Python genutzt werden.</br></br>
+    
+    </br>    
+    <form method="post" action="/login/">
+    {% csrf_token %}
+    Username: <input type="text" name="username"><br>
+    Passwort: <input type="password" name="password"><br>
+    <input type="submit" value="Login">
+    </form>
+    
+    </div>
+    
+    <div style="padding:10px;position: absolute;top:438px;left:828px;width:190px;height:150px;border-style:solid;border-width:2px;font-family: Lucida Console, monospace;font-size:100%">
+
+    FÖRDERER </br></br>
+    Das FAB3Lab bedankt sich für die freundliche Unterstützung von <a href="http://www.innerinnovation.de/>">Inner Innovation!</a>
+   
+    </div>
+
+    <div style="padding:10px;position: absolute;top:468px;left:60px;width:300px;height:180px;border-style:solid;border-width:2px;font-family: Lucida Console, monospace;font-size:100%">
+
+    AUSRÜSTUNG</br></br>
+    
+    Mit diesen Geräten kann im FAB3Lab gearbeitet werden:</br>
+    <li>3D Drucker (Kossel XL)</li>
+    <li>6x Arduino Uno</li>
+    <li>Sensoren</li></br>
+    
+    <a href="mailto:fab3lab@zu.de">Ausrüstung spenden!</a>
+    
+    </div>    
+    
+    <div style="padding:10px;position: absolute;top:518px;left:394px;width:400px;height:200px;border-style:solid;border-width:2px;font-family: Lucida Console, monospace;font-size:100%">
+
+    MITMACHEN</br> </br>
+    
+    Wie der Produktionsraum steht das FAB3Lab allen Studierenden, Mitarbeitern und Lehrenden der Zeppelin Universität offen. Herzlich eingeladen sind außerdem alle Studierenden der DHBW in Friedrichshafen und alle Maker auf der Durchreise! </br></br>
+    
+    <a href="lalalaPODIOKALENDERLINK">Hier</a> geht's zum Veranstaltungskalender, <a href="lalalaPODIOFORMULARLINK">hier</a> zum Anmeldeformular.
+    </div>    
+    
+</body>
+
+</html>
