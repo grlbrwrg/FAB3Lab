@@ -12,10 +12,7 @@ Stylesheets und Responsive Design sind für Warmduscher.
 <head>
     <meta charset="utf-8">
     <title>Das FAB3lab im Produktionsraum</title>
-    <script src ="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-    <script src ="http://code.highcharts.com/highcharts.js"></script>
-    {% load chartit %}
-    {{ chart|load_charts:"container" }}
+
 </head>
 
 
@@ -41,7 +38,9 @@ Stylesheets und Responsive Design sind für Warmduscher.
     
     </div>
 
-    <div id='container' style="padding:10px;position: absolute;top:84px;left:394px;width:400px;height:400px;border-style:solid;border-width:2px;font-family: Lucida Console, monospace;font-size:100%"> </div>    
+    <div style="padding:10px;position: absolute;top:84px;left:394px;width:400px;height:400px;border-style:solid;border-width:2px;font-family: Lucida Console, monospace;font-size:100%"> 
+    <img src="{% url 'Chart' %}" />
+    </div>    
     
     <div style="padding:10px;position: absolute;top:84px;left:828px;width:300px;height:320px;border-style:solid;border-width:2px;font-family: Lucida Console, monospace;font-size:100%">
 
